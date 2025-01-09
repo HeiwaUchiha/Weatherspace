@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Weathersphere | Weather</title>
+    <meta name="description" content="This is the Weather Section of Weathersphere">
+    <meta name="title" content="Weathersphere | Weather">
+    <link rel="shortcut icon" href="/assets/Weathersphere-back.svg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ---------- #HEADER & NAV# ---------- -->
+    <header>
+        <nav>
+            <audio id="menu-audio" src="/assets/mouse-click-sound-233951.mp3" preload="auto">Thanks</audio>
+            <a href="index.html">
+                <img href="index.html" src="/assets/logo.svg" alt="Weathersphere" >
+            </a>
+
+            <div class="search-view" data-search-view>
+                <div class="search-wrapper">
+                    <div class="city-wrapper">
+                        <input type="search" name="search" class="city-field" placeholder="Enter City" autocomplete="off" data-search-field>
+                        <span  class="m-icon city-icon">search</span>
+                    </div>
+                    
+                    <div class="city-result" data-search-result>
+                    </div>
+                </div>
+                <a href="#/current-location" class="btn-primary" >
+                    <button data-current-location-btn><span class="m-icon">my_location</span>Current Location</button>
+                </a>
+            </div>   
+    
+            <div class="city-search" data-search-view>
+                <div class="city-wrapper">
+                    <input type="search" name="search" class="city-field" placeholder="Enter City" autocomplete="off" data-search-field>
+                    <span  class="m-icon city-icon">search</span>
+                </div>                
+                <div class="city-result" data-search-result>
+                </div>
+                <a href="#/current-location" class="btn-primary">
+                    <button data-current-location-btn><span class="m-icon">my_location</span>Current Location</button>
+                </a>
+            </div>
+            
+            <input type="checkbox" role="button" aria-label="Display the menu" class="menu">
+        </nav>
+    </header>
+    
+
+    <!-- ---------- #LOADING# ---------- -->
+    <main class="loading" data-loading>      
+    </main>
+
+
+    <!-- ---------- #WEATHER CONTENT# ---------- -->
+    <main class="weather">
+        <article class="container" data-container>
+            <div class="content-left">
+                <!-- ---------- #CURRENT WEATHER# ---------- -->
+                 <section class="content current-weather" aria-label="currentweather" data-current-weather>
+                 </section>
+
+                 <!-- ---------- #FORECAST# ---------- -->
+                  <section class="section forecast" aria-labelledby="forecast-label" data-5-day-forecast>
+                  </section>
+            </div>
+
+            <div class="content-right">
+                <!-- ---------- #HIGHLIGHTS# ---------- -->
+                 <section class="section highlights" aria-labelledby="highlights-label" data-highlights>
+                 </section>
+
+                <!-- ---------- #HOURLY FORECAST# ---------- -->
+                 <section class="section hourly-forecast" aria-label="hourlyforecast" data-hourly-forecast>                   
+                 </section>
+
+                <!-- ---------- #FOOTER# ---------- -->
+                <footer class="footer">
+                    <p class="body-3">Copyright 2024 Heiwa_des. All Rights Reserved.</p>
+                    <p class="body-3">
+                        Powered By <a href="https://openweathermap.org/api" title="Free OpenWeather Api" target="_blank" rel="noopener">
+                                        <img src="assets/openweather.png" alt="OpenWeather">
+                                    </a>
+                    </p>
+                </footer>
+            </div>
+        </article>
+    </main>
+
+
+    <!-- ---------- #404 SECTION# ---------- -->
+     <section class="error-content" data-error-content>
+        <h2 class="heading">404</h2>
+        <p class="body-1">PAGE NOT FOUND!</p>
+        <a href="#/weather?lat=6.339185&lon=5.617447" class="btn-primary"><button class="home">Go Home</button></a>
+     </section>
+
+    <script type="module" src="app.js"></script>
+    <script type="module" src="route.js"></script>
+</body>
+</html>
